@@ -1,0 +1,1 @@
+I tried thoes excercise's by myselft, I could solve almost all of them, but need some help on the some excercise. So I had a look at the professor's solution and realized the key solution for set layout location using float and clear attribute. It was great excercise to learn layouting boxes in css.
