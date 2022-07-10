@@ -1,0 +1,103 @@
+body, html {
+    background-color: #FFF;
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+    color: #102A43;
+    background-color: #F0F4F8;
+    letter-spacing: 1px;
+}
+
+header {
+    background: #0E7C86;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+header h2 {
+    margin: 0;
+}
+
+nav {
+    background: rgba(9, 82, 74, 0.96);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 10px;
+    border-right: 1px solid black;
+}
+
+nav ul li > a {
+    text-decoration: none;
+}
+
+#pageContent {
+    max-width: 1000px;
+    display: flex;
+}
+
+#pageContent .column {
+    flex-basis: 25%;
+}
+
+#pageContent > #column1 {
+    background-color: rgba(169, 169, 169, 0.75);
+    height: 200px;
+}
+
+#pageContent > #column2 {
+    background-color: rgba(186, 186, 186, 0.75);
+    height: 200px;
+    flex-basis: 50%;
+}
+
+#pageContent > #column3 {
+    background-color: rgba(203, 203, 203, 0.75);
+    height: 200px;
+}
+
+
+footer {
+    background: #AEC6CF;
+    max-width: 1000px;
+    margin: auto;
+    clear: both;
+    text-align: center;
+}
+
+footer p {
+    padding: 20px;
+    margin: 0;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    #pageContent {
+        display: grid;
+        grid-template-areas: "col1 col3" "col2 col2";
+    }
+
+    #pageContent .column {
+        float: none;
+    }
+
+    #pageContent > #column1 {
+        grid-area: col1;
+    }
+
+    #pageContent > #column3 {
+        grid-area: col3;
+    }
+
+    #pageContent > #column2 {
+        grid-area: col2;
+        background-color: #35469C;
+    }
+
+}
