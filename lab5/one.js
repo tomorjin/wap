@@ -130,23 +130,26 @@ const findLongestWord = function (arr) {
 }
 
 function testFindLongestWord() {
-    console.log("Expected output of findLongestWord([\"a\", \"abc\", \"good\", \"better\", \"at\"]) is better "
+    console.log("Expected output of findLongestWord(['a', 'abc', 'good', 'better', 'at']) is better "
         + "     TEST " + ((findLongestWord(["a", "abc", "good", "better", "at"]) === "better") ? "" : "NOT ") + "SUCCEEDED");
 }
 
 const filterLongWords = function (arr, len) {
-    let res = [];
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i].length >= len) {
-            res.push(arr[i]);
-        }
-    }
-    return res;
+    // let res = [];
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (arr[i].length >= len) {
+    //         res.push(arr[i]);
+    //     }
+    // }
+
+    return arr.filter(function(el){
+        return el.length >= len;
+    });
 }
 
 function testFilterLongWords() {
-    console.log("Expected output of filterLongWords([\"a\", \"abc\", \"good\", \"better\", \"at\"]) is [\"abc\", \"good\", \"better\"] "
-        + "     TEST " + ((findLongestWord(["a", "abc", "good", "better", "at"]) === "[abc, good, better]") ? "" : "NOT ") + "SUCCEEDED");
+    console.log("Expected output of filterLongWords(['a', 'abc', 'good', 'better', 'at']) is ['abc', 'good', 'better'] "
+        + "     TEST " + ((JSON.stringify(filterLongWords(["a", "abc", "good", "better", "at"], 3)) === "[\"abc\",\"good\",\"better\"]") ? "" : "NOT ") + "SUCCEEDED");
 }
 
 testMax();
